@@ -1,4 +1,4 @@
-# AngularVibrationDemo
+# AngularVibration
 
 ## Installation       
 
