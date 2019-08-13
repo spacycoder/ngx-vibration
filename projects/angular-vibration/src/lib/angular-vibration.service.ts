@@ -7,7 +7,7 @@ export class AngularVibrationService {
 
   constructor() { }
 
-  vibrate(vibratePattern: number[]) {
+  vibrate(vibratePattern: number[]): boolean {
     const supportsVibration = window.navigator.vibrate;
     if (supportsVibration) {
       window.navigator.vibrate(vibratePattern);
@@ -16,12 +16,16 @@ export class AngularVibrationService {
     return !!supportsVibration;
   }
 
-  cancelVibration() {
+  cancelVibration(): boolean {
     const supportsVibration = window.navigator.vibrate;
     if (supportsVibration) {
       window.navigator.vibrate(0);
     }
 
     return !!supportsVibration;
+  }
+
+  hasVibrationSupport(): boolean {
+    return  !!window.navigator.vibrate;
   }
 }
