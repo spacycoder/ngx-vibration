@@ -129,7 +129,7 @@
       "projectType": "library",
       "root": "projects/angular-vibration",
       "sourceRoot": "projects/angular-vibration/src",
-      "prefix": "av",
+      "prefix": "ngx",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-ng-packagr:build",

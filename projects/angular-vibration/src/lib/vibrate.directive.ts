@@ -2,7 +2,7 @@ import { Directive, ElementRef, Renderer2, Input } from '@angular/core';
 import { AngularVibrationService } from './angular-vibration.service';
 
 @Directive({
-  selector: '[avVibrate]'
+  selector: '[ngxVibrate]'
 })
 export class VibrateDirective {
   @Input()
