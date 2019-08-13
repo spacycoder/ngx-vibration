@@ -7,7 +7,6 @@ import { AngularVibrationService } from './angular-vibration.service';
 export class VibrateDirective {
   @Input()
   vibrationPattern: number[];
-  red = false;
 
   constructor(
     private elementRef: ElementRef,
@@ -21,10 +20,5 @@ export class VibrateDirective {
     this.renderer.listen(this.elementRef.nativeElement, 'click', () =>
       this.vibrationService.vibrate(this.vibrationPattern)
     );
-    if (this.red) {
-      this.elementRef.nativeElement.style.backgroundColor = 'white';
-    } else {
-      this.elementRef.nativeElement.style.backgroundColor = 'red';
-    }
   }
 }
