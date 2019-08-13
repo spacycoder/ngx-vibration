@@ -17,7 +17,15 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "angular-vibration": [
+        "dist/angular-vibration"
+      ],
+      "angular-vibration/*": [
+        "dist/angular-vibration/*"
+      ]
+    }
   },
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,

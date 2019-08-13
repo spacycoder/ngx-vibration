@@ -124,6 +124,41 @@
           }
         }
       }
+    },
+    "angular-vibration": {
+      "projectType": "library",
+      "root": "projects/angular-vibration",
+      "sourceRoot": "projects/angular-vibration/src",
+      "prefix": "av",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/angular-vibration/tsconfig.lib.json",
+            "project": "projects/angular-vibration/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/angular-vibration/src/test.ts",
+            "tsConfig": "projects/angular-vibration/tsconfig.spec.json",
+            "karmaConfig": "projects/angular-vibration/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/angular-vibration/tsconfig.lib.json",
+              "projects/angular-vibration/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }},
   "defaultProject": "angular-vibration-demo"
 }
