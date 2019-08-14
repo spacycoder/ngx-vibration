@@ -1,4 +1,4 @@
-# AngularVibration
+# NgxVibration
 
 ## Setup       
 
