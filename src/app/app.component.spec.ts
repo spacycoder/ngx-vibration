@@ -16,16 +16,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'angular-vibration-demo'`, () => {
+  it(`should have as title 'ngx-vibration-demo'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.debugElement.componentInstance;
-    expect(app.title).toEqual('angular-vibration-demo');
+    expect(app.title).toEqual('ngx-vibration-demo');
   });
 
   it('should render title in a h1 tag', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('h1').textContent).toContain('Welcome to angular-vibration-demo!');
+    expect(compiled.querySelector('h1').textContent).toContain('Welcome to ngx-vibration-demo!');
   });
 });

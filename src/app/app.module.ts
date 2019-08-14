@@ -2,11 +2,11 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { AngularVibrationModule } from 'angular-vibration';
+import { NgxVibrationModule } from 'ngx-vibration';
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule, AngularVibrationModule],
+  imports: [BrowserModule, NgxVibrationModule],
   providers: [],
   bootstrap: [AppComponent]
 })

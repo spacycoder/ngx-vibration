@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AngularVibrationService } from 'projects/angular-vibration/src/public-api';
+import { NgxVibrationService } from 'projects/ngx-vibration/src/public-api';
 
 @Component({
   selector: 'app-root',
@@ -9,9 +9,9 @@ import { AngularVibrationService } from 'projects/angular-vibration/src/public-a
 export class AppComponent implements OnInit {
   hasVibrationSupport = false;
 
-  constructor(private angularVibration: AngularVibrationService) {}
+  constructor(private vibrationService: NgxVibrationService) {}
 
   ngOnInit() {
-    this.hasVibrationSupport = this.angularVibration.hasVibrationSupport();
+    this.hasVibrationSupport = this.vibrationService.hasVibrationSupport();
   }
 }

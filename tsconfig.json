@@ -19,11 +19,11 @@
       "dom"
     ],
     "paths": {
-      "angular-vibration": [
-        "dist/angular-vibration"
+      "ngx-vibration": [
+        "dist/ngx-vibration"
       ],
-      "angular-vibration/*": [
-        "dist/angular-vibration/*"
+      "ngx-vibration/*": [
+        "dist/ngx-vibration/*"
       ]
     }
   },

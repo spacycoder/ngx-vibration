@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 @Injectable({
   providedIn: 'root'
 })
-export class AngularVibrationService {
+export class NgxVibrationService {
 
   /**
    * Takes vibrationPattern as input and returns a boolean indicating success

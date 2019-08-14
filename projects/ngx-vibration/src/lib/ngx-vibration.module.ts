@@ -9,4 +9,4 @@ import { VibrationDirective } from './vibration.directive';
   ],
   exports: [VibrationDirective]
 })
-export class AngularVibrationModule { }
+export class NgxVibrationModule { }

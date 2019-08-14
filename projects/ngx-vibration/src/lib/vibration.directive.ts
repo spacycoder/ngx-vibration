@@ -1,5 +1,5 @@
 import { Directive, Input, HostListener } from '@angular/core';
-import { AngularVibrationService } from './angular-vibration.service';
+import { NgxVibrationService } from './ngx-vibration.service';
 
 @Directive({
   selector: '[ngxVibration]'
@@ -8,7 +8,7 @@ export class VibrationDirective {
   @Input('ngxVibration')
   vibratePattern: number[];
 
-  constructor(private vibrationService: AngularVibrationService) {}
+  constructor(private vibrationService: NgxVibrationService) {}
 
   @HostListener('click')
   private vibrate() {
