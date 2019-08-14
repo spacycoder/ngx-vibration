@@ -1,4 +1,4 @@
-import { Directive, ElementRef, Renderer2, Input } from '@angular/core';
+import { Directive, Input, HostListener } from '@angular/core';
 import { AngularVibrationService } from './angular-vibration.service';
 
 @Directive({
@@ -8,17 +8,10 @@ export class VibrateDirective {
   @Input()
   vibrationPattern: number[];
 
-  constructor(
-    private elementRef: ElementRef,
-    private renderer: Renderer2,
-    private vibrationService: AngularVibrationService
-  ) {
-    this.listenToMouseClick();
-  }
+  constructor(private vibrationService: AngularVibrationService) {}
 
-  private listenToMouseClick() {
-    this.renderer.listen(this.elementRef.nativeElement, 'click', () =>
-      this.vibrationService.vibrate(this.vibrationPattern)
-    );
+  @HostListener('click')
+  private vibrate() {
+    this.vibrationService.vibrate(this.vibrationPattern);
   }
 }
