@@ -5,13 +5,13 @@ import { AngularVibrationService } from './angular-vibration.service';
   selector: '[ngxVibrate]'
 })
 export class VibrateDirective {
-  @Input()
-  vibrationPattern: number[];
+  @Input('ngxVibrate')
+  vibratePattern: number[];
 
   constructor(private vibrationService: AngularVibrationService) {}
 
   @HostListener('click')
   private vibrate() {
-    this.vibrationService.vibrate(this.vibrationPattern);
+    this.vibrationService.vibrate(this.vibratePattern);
   }
 }
