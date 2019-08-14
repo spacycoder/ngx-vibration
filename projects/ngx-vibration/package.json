@@ -2,8 +2,8 @@
   "name": "ngx-vibration",
   "version": "0.0.2",
   "repository": {
-    "type" : "git",
-    "url" : "https://github.com/spacycoder/ngx-vibration.git"
+    "type": "git",
+    "url": "https://github.com/spacycoder/ngx-vibration.git"
   },
   "author": "spacycoder",
   "peerDependencies": {

@@ -4,7 +4,7 @@
 
 * Install with npm:
 ```bash
-npm i ngx-vibrate
+npm i ngx-vibration
 ```
 
 * Import `NgxVibrationModule` in your App Module.
