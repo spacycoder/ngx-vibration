@@ -3,5 +3,5 @@
  */
 
 export * from './lib/angular-vibration.service';
-export * from './lib/vibrate.directive';
+export * from './lib/vibration.directive';
 export * from './lib/angular-vibration.module';

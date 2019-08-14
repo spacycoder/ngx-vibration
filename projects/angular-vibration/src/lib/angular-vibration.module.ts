@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
-import { VibrateDirective } from './vibrate.directive';
+import { VibrationDirective } from './vibration.directive';
 
 
 
 @NgModule({
-  declarations: [VibrateDirective],
+  declarations: [VibrationDirective],
   imports: [
   ],
-  exports: [VibrateDirective]
+  exports: [VibrationDirective]
 })
 export class AngularVibrationModule { }
