@@ -1,10 +1,24 @@
 # AngularVibration
 
-## Installation       
+## Setup       
 
-COMING SOON
+* Install with npm:
+```bash
+npm i ngx-vibrate
+```
 
-## How To Use
+* Import `NgxVibrationModule` in your App Module.
+```typescript
+import { NgxVibrationModule } from 'ngx-vibration';
+
+@NgModule({
+  imports: [..., NgxVibrationModule],
+  ...
+})
+export class AppModule {}
+```
+
+## Usage
 
 ### Vibration Directive
 
@@ -13,3 +27,24 @@ Add the ngxVibration directive to an HTML element. The directive takes a vibrati
 <button [ngxVibration]="[200, 100, 200]">VIBRATE</button>
 ```
 
+### Vibration Service
+
+```typescript
+export class AppComponent implements OnInit {
+  hasVibrationSupport = false;
+
+  constructor(private vibrationService: NgxVibrationService) {}
+
+  ngOnInit() {
+    this.hasVibrationSupport = this.vibrationService.hasVibrationSupport();
+  }
+
+  vibrate() {
+    this.vibrationService.vibrate([200, 100, 200]);
+  }
+
+  cancelVibration() {
+    this.vibrationService.cancelVibration();
+  }
+}
+```
