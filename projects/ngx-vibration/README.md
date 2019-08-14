@@ -1,24 +1,50 @@
-# AngularVibration
+# NgxVibration
 
-This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.2.0.
+## Setup       
 
-## Code scaffolding
+* Install with npm:
+```bash
+npm i ngx-vibrate
+```
 
-Run `ng generate component component-name --project ngx-vibration` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project ngx-vibration`.
-> Note: Don't forget to add `--project ngx-vibration` or else it will be added to the default project in your `angular.json` file. 
+* Import `NgxVibrationModule` in your App Module.
+```typescript
+import { NgxVibrationModule } from 'ngx-vibration';
 
-## Build
+@NgModule({
+  imports: [..., NgxVibrationModule],
+  ...
+})
+export class AppModule {}
+```
 
-Run `ng build ngx-vibration` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Usage
 
-## Publishing
+### Vibration Directive
 
-After building your library with `ng build ngx-vibration`, go to the dist folder `cd dist/ngx-vibration` and run `npm publish`.
+Add the ngxVibration directive to an HTML element. The directive takes a vibration pattern as input. The values of the array describes alternating periods of time in which the device is vibrating and not vibrating.
+```html
+<button [ngxVibration]="[200, 100, 200]">VIBRATE</button>
+```
 
-## Running unit tests
+### Vibration Service
 
-Run `ng test ngx-vibration` to execute the unit tests via [Karma](https://karma-runner.github.io).
+```typescript
+export class AppComponent implements OnInit {
+  hasVibrationSupport = false;
 
-## Further help
+  constructor(private vibrationService: NgxVibrationService) {}
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+  ngOnInit() {
+    this.hasVibrationSupport = this.vibrationService.hasVibrationSupport();
+  }
+
+  vibrate() {
+    this.vibrationService.vibrate([200, 100, 200]);
+  }
+
+  cancelVibration() {
+    this.vibrationService.cancelVibration();
+  }
+}
+```
