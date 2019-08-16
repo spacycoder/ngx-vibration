@@ -5,6 +5,7 @@
     "type": "git",
     "url": "https://github.com/spacycoder/ngx-vibration.git"
   },
+  "license": "MIT",
   "author": "spacycoder",
   "peerDependencies": {
     "@angular/common": "^8.2.2",
