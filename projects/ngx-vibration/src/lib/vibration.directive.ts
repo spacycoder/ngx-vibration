@@ -10,6 +10,7 @@ export class VibrationDirective {
 
   constructor(private vibrationService: NgxVibrationService) {}
 
+  @HostListener('touch')
   @HostListener('click')
   private vibrate() {
     this.vibrationService.vibrate(this.vibratePattern);
