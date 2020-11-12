@@ -27,6 +27,13 @@ Add the ngxVibration directive to an HTML element. The directive takes a vibrati
 ```html
 <button [ngxVibration]="[200, 100, 200]">VIBRATE</button>
 ```
+```html
+<button [ngxVibration]="500">VIBRATE</button>
+```
+Or with the [global config](#global-configuration) _defaultPattern_ set: 
+```html
+<button ngxVibration>VIBRATE</button>
+```
 
 ### Vibration Service
 
@@ -49,3 +56,18 @@ export class AppComponent implements OnInit {
   }
 }
 ```
+
+### Global configuration
+
+You can provide a default configuration object when importing the module using the `forRoot()` method.
+
+``` typescript
+NgxVibrationModule.forRoot({
+  defaultPattern: [100, 0, 100]
+})
+```
+
+| Property       | Type       | Description                                                  |
+| -------------- | ---------- | ------------------------------------------------------------ |
+| defaultPattern | `number[]` | The pattern to use by default when no other is specified on the directives |
+
