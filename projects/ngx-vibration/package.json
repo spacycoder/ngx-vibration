@@ -1,18 +1,17 @@
 {
   "name": "ngx-vibration",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "repository": {
-    "type": "git",
-    "url": "https://github.com/spacycoder/ngx-vibration.git"
+      "type": "git",
+      "url": "https://github.com/spacycoder/ngx-vibration.git"
   },
   "license": "MIT",
   "author": "spacycoder",
   "peerDependencies": {
-    "@angular/common": "^8.2.2",
-    "@angular/core": "^8.2.2"
-  }
-,
+      "@angular/common": "^8.2.2",
+      "@angular/core": "^8.2.2"
+  },
   "dependencies": {
-    "tslib": "^2.0.0"
+      "tslib": "^2.0.0"
   }
 }
