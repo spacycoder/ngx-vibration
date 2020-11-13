@@ -1,9 +1,13 @@
-import { Injectable } from '@angular/core';
+import { Inject, Injectable, Optional } from '@angular/core';
+import { GLOBAL_CONFIG_TOKEN, NgxVibrationConfig } from './ngx-vibration.config';
 
 @Injectable({
   providedIn: 'root'
 })
 export class NgxVibrationService {
+  constructor(@Optional() @Inject(GLOBAL_CONFIG_TOKEN)
+              public readonly config: NgxVibrationConfig | null) {
+  }
 
   /**
    * Takes vibrationPattern as input and returns a boolean indicating success
